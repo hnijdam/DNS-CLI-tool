@@ -193,11 +193,28 @@ def query_domain_info(domain_name):
 
     print()  # Add a space after the last output
 
+def save_output_to_file(output, filename):
+    with open(filename, "w") as file:
+        file.write(output)
+
 if len(sys.argv) == 1:
     domain_to_query = input("Enter the domain you want to query: ")
 else:
     domain_to_query = sys.argv[1]
 
-query_domain_info(domain_to_query)
+output = query_domain_info(domain_to_query)
+
+save_option = input("Do you want to save the output to a plain text file without color codes? (y/n): ")
+if save_option.lower() == 'y':
+    filename = input("Enter the file name (e.g., output.txt): ")
+    save_output_to_file(output, filename)
+    print(f"Output saved to {filename}")
+else:
+    print(output)
 
 print("Script completed.")
+
+
+
+
+
