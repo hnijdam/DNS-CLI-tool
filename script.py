@@ -2,9 +2,7 @@ import dns.resolver
 import socket
 import ssl
 import OpenSSL.crypto
-import subprocess
 from datetime import datetime
-import sys
 import dns.exception
 
 def print_large_ascii_text(text):
@@ -192,26 +190,11 @@ def query_domain_info(domein_naam):
 
 print()  # Voeg een spatie toe na de laatste uitvoer
 
-def output_opslaan_naar_bestand(uitvoer, bestandsnaam):
-    with open(bestandsnaam, "w") as bestand:
-        bestand.write(uitvoer)
-
 if len(sys.argv) == 1:
     domein_om_op_te_vragen = input("Voer het domein in waarvoor je informatie wilt opvragen: ")
 else:
     domein_om_op_te_vragen = sys.argv[1]
 
-uitvoer = query_domain_info(domein_om_op_te_vragen)
-
-opslaan_optie = input("Wil je de uitvoer opslaan naar een plat tekstbestand zonder kleurcodes? (j/n): ")
-if opslaan_optie.lower() == 'j':
-    bestandsnaam = input("Voer de bestandsnaam in (bijv., uitvoer.txt): ")
-    if uitvoer:
-        output_opslaan_naar_bestand(uitvoer, bestandsnaam)
-        print(f"Uitvoer opgeslagen in {bestandsnaam}")
-    else:
-        print("Geen uitvoer om op te slaan.")
-else:
-    print(uitvoer)
+query_domain_info(domein_om_op_te_vragen)
 
 print("Einde")
