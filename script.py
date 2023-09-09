@@ -173,7 +173,7 @@ def query_domain_info(domein_naam):
                 print(f"\033[0m{line[i:i+max_line_length]:<76}\033[0m")  # Opmaak hier resetten naar normaal
     except (dns.resolver.NXDOMAIN, dns.resolver.NoAnswer):
         print_section_header(f"{geel_vet}Geen DMARC Records gevonden.{einde_opmaak}")
-        print("Heb je een typefout gemaakt?")  # Vriendelijke boodschap voor de fout
+        print("Heb je een typefout gemaakt?")  # friendly message voor de error
 
     # DKIM Records
     try:
@@ -190,8 +190,6 @@ def query_domain_info(domein_naam):
     except (dns.resolver.NXDOMAIN, dns.resolver.NoAnswer):
         print_section_header(f"{geel_vet}Geen DKIM Records gevonden.{einde_opmaak}")
 
-print()  # Voeg een spatie toe na de laatste uitvoer
-
 if len(sys.argv) == 1:
     domein_om_op_te_vragen = input("Voer het domein in waarvoor je informatie wilt opvragen: ")
 else:
@@ -200,7 +198,7 @@ else:
 query_domain_info(domein_om_op_te_vragen)
 
 
-print("\n" * 3)  # Adjust the number of blank lines as needed
+print("\n" * 3)  # Aantal witregels na het laatste record
 
 
 print("Einde")
