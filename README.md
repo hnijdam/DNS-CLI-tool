@@ -8,9 +8,6 @@ This script provides information about a domain's DNS records, SSL certificate d
 
 ```pip install -r requirements.txt```
 
-
-
-
 #1.2 Clone the repository or download the script:
 
 ```git clone https://github.com/hnijdam/DNS-CLI-tool.git```
@@ -23,7 +20,54 @@ This script provides information about a domain's DNS records, SSL certificate d
 ```chmod +x script.py```
 
 
+Step 1: Create an Alias for Your Script
 
+Open your terminal.
+
+Edit your shell's configuration file. The configuration file for your shell can be one of the following:
+
+For Bash, it's ~/.bashrc.
+For Zsh, it's ~/.zshrc.
+
+
+Use a text editor like nano or vim to open the configuration file:
+
+For Bash:
+
+```nano ~/.bashrc```
+
+For Zsh:
+
+```nano ~/.zshrc```
+
+Add an alias to your script. An alias is a short command that stands for a longer command. In this case, you're creating an alias called dns-tool that will run your Python script.
+
+For example, if your script is located at /path/to/your/script.py, add the following line to your configuration file:
+
+```alias lookup='python3 /path/to/your/script.py'```
+
+
+Replace /path/to/your/script.py with the actual path to your Python script.
+
+Save and exit the text editor:
+
+For nano, press Ctrl + O to save, then press Enter, and finally press Ctrl + X to exit.
+For vim, press Esc, then type :wq and press Enter.
+Apply the changes to your current terminal session or restart your terminal:
+
+For Bash:
+
+```source ~/.bashrc```
+
+
+For Zsh:
+
+```source ~/.zshrc```
+
+
+### USAGE ### 
+
+```lookup example.com```
 
 #### LICENCE ###
 
