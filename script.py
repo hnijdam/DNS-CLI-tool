@@ -1,6 +1,8 @@
 import dns.resolver
 import socket
+import sys
 import ssl
+import subprocess
 import OpenSSL.crypto
 from datetime import datetime
 import dns.exception
@@ -196,5 +198,9 @@ else:
     domein_om_op_te_vragen = sys.argv[1]
 
 query_domain_info(domein_om_op_te_vragen)
+
+
+
+
 
 print("Einde")
