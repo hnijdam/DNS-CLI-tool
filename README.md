@@ -1,4 +1,4 @@
-DNS Tool
+# DNS Tool
 This script provides information about a domain's DNS records, SSL certificate details, and more.
 
 ### Installation ### 
