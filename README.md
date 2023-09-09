@@ -1,20 +1,18 @@
 # DNS Tool
-This script provides information about a domain's DNS records, SSL certificate details, and more.
+
+This script gives you information about a domain's DNS records, SSL certificate details, and more.
 
 ### Installation ### 
 
-
-1.1 Install the python requirements with pip
-
-```pip install -r requirements.txt```
-
-#1.2 Clone the repository or download the script:
+#1.1 Clone the repository or download the script:
 
 ```git clone https://github.com/hnijdam/DNS-CLI-tool.git```
 
 ```cd DNS-CLI-tool/```
 
+1.2 Install the python requirements with pip
 
+```pip install -r requirements.txt```
 #1.3 Make the script executable (if needed):
 
 ```chmod +x script.py```
@@ -68,6 +66,9 @@ For Zsh:
 ### USAGE ### 
 
 ```lookup example.com```
+
+
+
 
 #### LICENCE ###
 
