@@ -200,7 +200,7 @@ else:
 query_domain_info(domein_om_op_te_vragen)
 
 
-
+print("\n" * 3)  # Adjust the number of blank lines as needed
 
 
 print("Einde")
